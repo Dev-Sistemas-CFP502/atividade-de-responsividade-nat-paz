@@ -30,9 +30,10 @@ p {
 
 .menu ul {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   justify-content: center;
   margin: 2rem;
+  flex-wrap: wrap;
 }
 
 .menu a {
@@ -45,7 +46,7 @@ p {
 }
 
 .menu a:hover {
-  border-color: #ffbb00;
+  border: solid 1px #ffbb00;
 }
 
 .conteudo {
@@ -66,7 +67,7 @@ p {
   align-items: center;
   background-color: #111111;
   padding: 1rem;
-  
+  overflow-x: scroll;
 }
 
 .introducao-img::-webkit-scrollbar {
@@ -135,7 +136,7 @@ p {
 }
 
 .vantagens h3{
-  margin: 10px 0;
+  margin: 0.60rem 0;
   font-size: 1.4rem;
 }
 .rodape {
@@ -149,4 +150,28 @@ p {
   color: #ffbb00;
   font-size: 2rem;
 }
-
+@media screen and (max-width: 740px){
+  .conteudo{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .vantagens{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .vantagens-titulo{
+    text-align: center;
+    max-width: 30.5rem;
+    background-position: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px){
+  .header{
+    font-size: 1.5rem;
+  }
+  .menu a{
+    padding: 0.7rem 1rem;
+    font-size: 15px;
+  }
+}
